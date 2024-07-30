@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+          theme: {
+                    screens: {
+            '2xl': {'max': '1535px'},
+
+            'xl': {'max': '1279px'},
+
+            'lg': {'max': '1023px'},
+
+            'md': {'max': '767px'},
+
+            'sm': {'max': '639px'},
+            },
+            extend: {
+              colors: {
+                cgray: '#FAFAFA',
+                cblue: '#374557',
+                cgreen: '#4CBC9A',
+                gviolet: '#A098AE'
+
+              }
+            }
+          }
+        }
+      </script>
+      <style type="text/tailwindcss">
+        @layer utilities {
+          .active {
+            background-color: #4CBC9A;
+            color: #fff;
+        }
+        
+        .active img,
+        .hover-img:hover img{
+            filter: brightness(0) invert(1);
+        }
+
+        .hover-over:hover > *:not(img){
+            background: #fff;
+        }
+
+        }
+      </style>
+</head>
+<body>
+    
+        <main class="w-screen h-screen flex overflow-hidden bg-cgray poppins-regular text-lg">
+            <aside class="bg-white w-[345px] h-screen pt-9 px-[47px]">
+                <a href="#" class="block  text-4xl text-center poppins-bold text-cblue mb-20">
+                    <span class="text-[40px] text-cgreen ">LMS</span> admin
+                </a>
+                <div class="flex flex-col gap-6 text-gviolet">
+                    <a href="#" class=" flex items-center gap-6  py-4 px-6 rounded-2xl hover:bg-cgreen hover:text-white
+                transition ease-in delay-50 hover-img active">
+                        <img src="img/Apps.svg" alt="app">
+                        Bosh sahifa
+                    </a>
+                    <a href="#" class=" flex items-center gap-6  py-4 px-6 rounded-2xl hover:bg-cgreen hover:text-white
+                transition ease-in delay-50 hover-img">
+                        <img src="img/open-book.svg" alt="book">
+                        Fakultetlar
+                    </a>
+                    <a href="#" class=" flex items-center gap-6  py-4 px-6 rounded-2xl hover:bg-cgreen hover:text-white
+                transition ease-in delay-50 hover-img">
+                        <img src="img/calendar.svg" alt="calendar">
+                        Darslar
+                    </a>
+                    <a href="#" class=" flex items-center gap-6  py-4 px-6 rounded-2xl hover:bg-cgreen hover:text-white
+                transition ease-in delay-50 hover-img">
+                        <img src="img/users.svg" alt="users">
+                        Xodimlar
+                    </a>
+                    <a href="#" class=" flex items-center gap-6  py-4 px-6 rounded-2xl hover:bg-cgreen hover:text-white
+                transition ease-in delay-50 hover-img">
+                        <img src="img/account.svg" alt="account">
+                        Talabalar
+                    </a>
+                    <a href="#" class=" flex items-center gap-6  py-4 px-6 rounded-2xl hover:bg-cgreen hover:text-white
+                transition ease-in delay-50 hover-img">
+                        <img src="img/Checkmark.svg" alt="check">
+                        Topshiriqlar
+                    </a>
+                    <a href="#" class=" flex items-center gap-6  py-4 px-6 rounded-2xl hover:bg-cgreen hover:text-white
+                transition ease-in delay-50 hover-img">
+                        <img src="img/activity.svg" alt="activity">
+                        Buxgalteriya
+                    </a>
+                    <a href="#" class=" flex items-center gap-6  py-4 px-6 rounded-2xl hover:bg-cgreen hover:text-white
+                transition ease-in delay-50 hover-img">
+                        <img src="img/file.svg" alt="file">
+                        Hujjatlar
+                    </a>
+                </div>
+            </aside>
+            <section class="flex-1 h-screen flex flex-col">
+                <header class="py-[30px] pl-10 pr-[50px] bg-white flex items-center">
+                    <div class="poppins-bold text-4xl text-cblue mr-[190px]">Bosh Sahifa</div>
+                    <form class="flex items-center gap-2 px-6 py-[16px] bg-cgray rounded-2xl ">
+                      <label for="search">
+                        <img src="img/search.svg" alt="search">
+                      </label>
+                        <input type="text" id="search" placeholder="Kalit so’z bo’yicha qidiruv" class="w-[425px] focus:outline-0 text-gray-600 bg-cgray">
+                    </form>
+
+                    <div class="ml-auto flex items-center gap-2">
+                        <button class="relative size-[60px] flex items-center justify-center hover:bg-cgreen hover-over hover-img rounded-2xl">
+                            <span class="size-2 rounded-full bg-cgreen absolute top-[10px] right-[10px]"></span>
+                            <img src="img/chat.svg" alt="chat">
+                        </button>
+                        <button class="relative size-[60px] flex items-center justify-center hover:bg-cgreen  hover-over hover-img   rounded-2xl">
+                            <span class="size-2 rounded-full bg-cgreen absolute top-[10px] right-[10px]"></span>
+                            <img src="img/Bell.svg" alt="bell">
+                        </button>
+                        <a href="#" class="relative size-[60px] flex items-center justify-center hover:bg-cgreen hover-img rounded-2xl">
+                            <img src="img/Settings.svg" alt="settings">
+                        </a>
+                        <a href="#" class="relative size-[60px] flex items-center justify-center overflow-hidden ml-4 rounded-2xl">
+                            <img src="img/placeholder.jpg" alt="placeholder">
+                        </a>
+                    </div>
+                </header>
+                <section class="flex-1 overflow-scroll p-10">
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit aliquid ea deleniti sit pariatur harum, nihil repudiandae neque velit, odit quis a quia! Ab maiores assumenda natus voluptate! Officiis, est?</p>
+                    <p>Necessitatibus alias laborum, debitis doloribus dolorum eum accusantium praesentium fuga odit obcaecati, aperiam magni hic inventore tempora itaque ipsum aliquam officia voluptatem natus numquam repellat, voluptate nobis veritatis maxime? Autem!</p>
+                    <p>Architecto sunt doloremque eos at cumque quidem accusamus voluptates minus? Dolore qui asperiores dignissimos possimus fugiat at maiores, quas adipisci itaque officia vero autem magnam ipsa ex, delectus corrupti accusamus.</p>
+                    <p>Consequuntur delectus mollitia necessitatibus accusantium autem adipisci eaque optio! Quis temporibus blanditiis eveniet, molestias aliquam nesciunt nihil beatae est. Facilis rerum maxime optio, officiis sed voluptas ut consequuntur corporis sequi!</p>
+                    <p>Nobis odio aliquam corporis molestiae neque! Ducimus obcaecati blanditiis impedit harum iure molestias provident nulla, non natus explicabo fuga dicta tempore sunt, culpa inventore quia dolorum autem quas unde! Deserunt!</p>
+                    <p>Deleniti quasi accusantium debitis facere error aspernatur numquam, fuga maiores nostrum perferendis saepe iure adipisci nesciunt eveniet et pariatur asperiores? Porro ducimus cupiditate aliquid cumque magni atque perferendis veniam alias.</p>
+                    <p>Omnis at laudantium voluptatibus nemo harum ea corporis. Animi, enim ipsum aliquid fugiat accusantium ratione. Expedita ipsam unde tempora placeat est quas deleniti illo tenetur nisi. Unde eligendi placeat ducimus.</p>
+                    <p>Pariatur repudiandae asperiores eum adipisci odio veniam rem voluptatum. Repellendus exercitationem hic et ab repudiandae molestias, deleniti ullam quaerat? Consectetur perspiciatis saepe error commodi autem facilis doloribus ex inventore sapiente!</p>
+                    <p>Cum exercitationem, quidem similique neque quasi harum optio. Et dolores impedit necessitatibus possimus odio consequuntur ut vel officiis quod numquam ipsum obcaecati alias nesciunt, repellat provident laudantium! Tenetur, dolorem veritatis?</p>
+                    <p>Reiciendis assumenda, obcaecati voluptatum sapiente dignissimos earum, deserunt, natus eveniet amet facere minus officiis repellat modi et exercitationem voluptatibus? Recusandae nobis molestias iusto! Quas ut labore rerum quibusdam qui corporis?</p>
+                    <p>Consectetur vel in, debitis dignissimos repudiandae itaque tempora cumque recusandae nam, sunt exercitationem dicta repellendus aperiam rerum asperiores esse sint quae doloribus voluptatem! Odio officia deleniti ab perferendis, aliquam recusandae!</p>
+                    <p>Exercitationem fuga culpa excepturi beatae minus voluptate asperiores. Magnam dolore accusamus numquam beatae eum! Dolores placeat cumque unde quo molestiae minima voluptates ratione iure reprehenderit quibusdam? Consequatur natus recusandae fugit.</p>
+                    <p>Nihil ad necessitatibus accusamus illo corporis natus nulla est. Eius molestiae reiciendis tempora commodi quibusdam excepturi omnis! Obcaecati in libero repudiandae neque facilis, illo quis non cum, placeat, corporis minus.</p>
+                    <p>Doloremque ullam maxime minus tempora sed esse consectetur accusamus at nisi alias voluptatem assumenda non aliquam cupiditate laudantium deleniti provident, quaerat officiis natus minima architecto harum ipsam. Molestiae, aliquid id.</p>
+                    <p>Et, cum eos optio, delectus earum ea minus libero, tempora consequatur consectetur error voluptas laudantium iure laboriosam quia voluptate maxime! In, repudiandae cum dolores molestias tempora dolorem obcaecati impedit perspiciatis!</p>
+                    <p>Dolorum provident ut alias ab nemo ex incidunt laboriosam doloremque quas aliquid assumenda esse doloribus tempore dolores commodi quo quaerat, illo consectetur quidem nihil itaque. Repudiandae assumenda mollitia natus labore.</p>
+                    <p>Corporis quo omnis saepe tempore iusto odio cumque. Culpa harum illum repellendus, deserunt porro excepturi at enim laudantium nemo aliquid voluptas natus? Ipsum veniam repellat magni, accusamus et porro corporis.</p>
+                    <p>Eaque sint autem obcaecati perferendis ducimus, facere saepe et illum. Accusamus inventore aspernatur vel consequatur quos debitis voluptatibus! Quos tempore perspiciatis vero nostrum hic doloremque, dolore molestias nesciunt doloribus debitis.</p>
+                    <p>Tempore ipsa mollitia fugit, labore minus minima recusandae voluptatem necessitatibus! Inventore libero corrupti tenetur, praesentium earum accusantium laborum voluptate distinctio saepe ullam delectus est ratione sed maxime fuga! Minima, molestias!</p>
+                    <p>Architecto nesciunt amet quam maxime, et molestias at facilis fugit soluta nisi quos eius iusto hic porro sunt numquam incidunt asperiores quaerat veritatis. Officiis ipsa temporibus dolores, assumenda amet maiores!</p>
+                </section>
+            </section>
+        </main>
+
+
+</body>
+</html>
