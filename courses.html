@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LMS DOC</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+          theme: {
+                    screens: {
+            '2xl': {'max': '1535px'},
+
+            'xl': {'max': '1279px'},
+
+            'lg': {'max': '1023px'},
+
+            'md': {'max': '767px'},
+
+            'sm': {'max': '639px'},
+            },
+            extend: {
+              colors: {
+                cgray: '#FAFAFA',
+                cblue: '#374557',
+                cgreen: '#4CBC9A',
+                gviolet: '#A098AE',
+                corange: '#FC6B57',
+                lightblue: '#3CC2E0',
+                dots: '#A098AE',
+                yellooww: '#FEC64F',
+
+              }
+            }
+          }
+        }
+      </script>
+      <style type="text/tailwindcss">
+        @layer utilities {
+          .active {
+            background-color: #4CBC9A;
+            color: #fff;
+        }
+        
+        .active img,
+        .hover-img:hover img{
+            filter: brightness(0) invert(1);
+        }
+
+        .hover-over:hover > *:not(img){
+            background: #fff;
+        }
+
+        }
+      </style>
+</head>
+<body>
+    
+        <main class="w-screen h-screen flex overflow-hidden bg-cgray poppins-regular text-lg">
+            <aside class="bg-white w-[345px] h-screen pt-9 px-[47px]">
+                <a href="#" class="block  text-4xl text-center poppins-bold text-cblue mb-20">
+                    <span class="text-[40px] text-cgreen ">LMS</span> admin
+                </a>
+                <div class="flex flex-col gap-6 text-gviolet">
+                    <a href="#" class=" flex items-center gap-6  py-4 px-6 rounded-2xl hover:bg-cgreen hover:text-white
+                transition ease-in delay-50 hover-img active">
+                        <img src="img/Apps.svg" alt="app">
+                        Bosh sahifa
+                    </a>
+                    <a href="#" class=" flex items-center gap-6  py-4 px-6 rounded-2xl hover:bg-cgreen hover:text-white
+                transition ease-in delay-50 hover-img">
+                        <img src="img/open-book.svg" alt="book">
+                        Fakultetlar
+                    </a>
+                    <a href="#" class=" flex items-center gap-6  py-4 px-6 rounded-2xl hover:bg-cgreen hover:text-white
+                transition ease-in delay-50 hover-img">
+                        <img src="img/calendar.svg" alt="calendar">
+                        Darslar
+                    </a>
+                    <a href="#" class=" flex items-center gap-6  py-4 px-6 rounded-2xl hover:bg-cgreen hover:text-white
+                transition ease-in delay-50 hover-img">
+                        <img src="img/users.svg" alt="users">
+                        Xodimlar
+                    </a>
+                    <a href="#" class=" flex items-center gap-6  py-4 px-6 rounded-2xl hover:bg-cgreen hover:text-white
+                transition ease-in delay-50 hover-img">
+                        <img src="img/account.svg" alt="account">
+                        Talabalar
+                    </a>
+                    <a href="#" class=" flex items-center gap-6  py-4 px-6 rounded-2xl hover:bg-cgreen hover:text-white
+                transition ease-in delay-50 hover-img">
+                        <img src="img/Checkmark.svg" alt="check">
+                        Topshiriqlar
+                    </a>
+                    <a href="#" class=" flex items-center gap-6  py-4 px-6 rounded-2xl hover:bg-cgreen hover:text-white
+                transition ease-in delay-50 hover-img">
+                        <img src="img/activity.svg" alt="activity">
+                        Buxgalteriya
+                    </a>
+                    <a href="#" class=" flex items-center gap-6  py-4 px-6 rounded-2xl hover:bg-cgreen hover:text-white
+                transition ease-in delay-50 hover-img">
+                        <img src="img/file.svg" alt="file">
+                        Hujjatlar
+                    </a>
+                </div>
+            </aside>
+            <section class="flex-1 h-screen flex flex-col">
+                <header class="py-[30px] pl-10 pr-[50px] bg-white flex items-center">
+                    <div class="poppins-bold text-4xl text-cblue mr-[190px]">Bosh Sahifa</div>
+                    <form class="flex items-center gap-2 px-6 py-[16px] bg-cgray rounded-2xl ">
+                      <label for="search">
+                        <img src="img/search.svg" alt="search">
+                      </label>
+                        <input type="text" id="search" placeholder="Kalit so’z bo’yicha qidiruv" class="w-[425px] focus:outline-0 text-gray-600 bg-cgray">
+                    </form>
+
+                    <div class="ml-auto flex items-center gap-2">
+                        <button class="relative size-[60px] flex items-center justify-center hover:bg-cgreen hover-over hover-img rounded-2xl">
+                            <span class="size-2 rounded-full bg-cgreen absolute top-[10px] right-[10px]"></span>
+                            <img src="img/chat.svg" alt="chat">
+                        </button>
+                        <button class="relative size-[60px] flex items-center justify-center hover:bg-cgreen  hover-over hover-img   rounded-2xl">
+                            <span class="size-2 rounded-full bg-cgreen absolute top-[10px] right-[10px]"></span>
+                            <img src="img/Bell.svg" alt="bell">
+                        </button>
+                        <a href="#" class="relative size-[60px] flex items-center justify-center hover:bg-cgreen hover-img rounded-2xl">
+                            <img src="img/Settings.svg" alt="settings">
+                        </a>
+                        <a href="#" class="relative size-[60px] flex items-center justify-center overflow-hidden ml-4 rounded-2xl">
+                            <img src="img/placeholder.jpg" alt="placeholder">
+                        </a>
+                    </div>
+                </header>
+            </section>
+        </main>
+
+
+</body>
+</html>
