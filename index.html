@@ -8,17 +8,17 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
         tailwind.config = {
-          theme: {
-                    screens: {
-            '2xl': {'max': '1535px'},
+        theme: {
+           screens: {
+              '2xl': {'max': '1535px'},
 
-            'xl': {'max': '1279px'},
+              'xl': {'max': '1440px'},
 
-            'lg': {'max': '1023px'},
+              'lg': {'max': '1023px'},
 
-            'md': {'max': '767px'},
+              'md': {'max': '767px'},
 
-            'sm': {'max': '639px'},
+              'sm': {'max': '639px'},
             },
             extend: {
               colors: {
@@ -30,37 +30,38 @@
                 lightblue: '#3CC2E0',
                 dots: '#A098AE',
                 yellooww: '#FEC64F',
-
               }
             }
           }
         }
-      </script>
-      <style type="text/tailwindcss">
-        @layer utilities {
-          .active {
-            background-color: #4CBC9A;
-            color: #fff;
-        }
-        
-        .active img,
-        .hover-img:hover img{
-            filter: brightness(0) invert(1);
-        }
+    </script>
+    <style type="text/tailwindcss">
+      @layer utilities {
+        .active {
+          background-color: #4CBC9A;
+          color: #fff;
+      }
+      
+      .active img,
+      .hover-img:hover img{
+          filter: brightness(0) invert(1);
+      }
 
-        .hover-over:hover > *:not(img){
-            background: #fff;
-        }
+      .hover-over:hover > *:not(img){
+          background: #fff;
+      }
 
-        }
-      </style>
+      }
+    </style>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script defer src="Js/script.js"></script>
 </head>
 <body>
     
         <main class="w-screen h-screen flex overflow-hidden bg-cgray poppins-regular text-lg">
             <aside class="bg-white w-[345px] h-screen pt-9 px-[47px]">
-                <a href="#" class="block  text-4xl text-center poppins-bold text-cblue mb-20">
-                    <span class="text-[40px] text-cgreen ">LMS</span> admin
+                <a href="#" class="block xl:mb-15 xl:text-[28px] text-4xl text-center poppins-bold text-cblue mb-20">
+                    <span class="xl:text-[32px] text-[40px] text-cgreen ">LMS</span> admin
                 </a>
                 <div class="flex flex-col gap-6 text-gviolet">
                     <a href="#" class=" flex items-center gap-6  py-4 px-6 rounded-2xl hover:bg-cgreen hover:text-white
@@ -142,6 +143,7 @@
                         </div>
                         <img src="img/banner.jpg" alt="banner" class="absolute left-0 top-0 w-full h-full z-0">
                       </div>
+
                       <div class="grid grid-cols-3 gap-x-6">
                         <div class="rounded-2xl relative overflow-hidden bg-cgreen p-8 text-white">
                           <div class="rounded-2xl mb-8 size-[72px] bg-white ring-[1px] ring-inset ring-gray flex items-center justify-center">
@@ -179,6 +181,22 @@
 
                           <img src="img/users.svg" alt="users" class="absolute size-[215px] bottom-[13px] -right-[55px] brightness-0 invert opacity-25">
 
+                        </div>
+                      </div>
+
+                      <div class="flex items-center justify-between">
+                        <div class="flex flex-col rounded-2xl bg-white py-8 pr-[26px] pl-[41px] gap-[18px]">
+                          <div class="flex items-center poppins-bold text-2xl text-cblue gap-[90px]">
+                            Talabalar o’zlashtirish
+                            <div class="flex items-start gap-[30px] ml-auto">
+                              <div class="poppins-regular text-sm text-gviolet flex items-center gap-2"><span class="w-3 h-3 rounded-full ring-[3px] ring-inset ring-yellooww"></span> 2024-2025</div>
+                              <div class="poppins-regular text-sm text-gviolet flex items-center gap-2"><span class="w-3 h-3 rounded-full ring-[3px] ring-inset ring-cgreen"></span> 2026-2027</div>
+                              <div class="text-dots flex items-center justify-center w-[22px] cursor-pointer h-[6px] text-[30px]">...</div>
+                            </div>
+                          </div>
+                          <div class="w-full">
+                            <canvas class="w-full cursor-pointer" id="myChart" width="631" height="300"></canvas>
+                          </div>
                         </div>
                       </div>
                     </div>
@@ -349,7 +367,7 @@
                           <div class="flex flex-col gap-8">
                             <div class="flex items-center justify-between">
                               <h2 class="poppins-bold text-2xl text-cblue">Vazifalar</h2>
-                              <div class="text-dots flex items-center justify-center w-[22px] h-[6px] text-[42px]">...</div>
+                              <div class="text-dots flex items-center justify-center w-[22px] cursor-pointer h-[6px] text-[42px]">...</div>
                             </div>
                             <div class="flex flex-col gap-[10px]">
                               <div class="bg-cgray rounded w-full overflow-hidden h-4">
