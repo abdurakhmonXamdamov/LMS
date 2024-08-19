@@ -51,6 +51,10 @@
           background: #fff;
       }
 
+      .gradient{
+        background: conic-gradient(#374557 225deg, #FAFAFA 0deg);
+      }
+
       }
     </style>
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
@@ -197,6 +201,22 @@
                           <div class="w-full">
                             <canvas class="w-full cursor-pointer" id="myChart" width="631" height="300"></canvas>
                           </div>
+                        </div>
+                        <div class="bg-white rounded-2xl p-8 flex flex-col items-center w-[257px]">
+                          <div class="relative size-[160px] rounded-full flex items-center justify-center gradient before:content-[''] before:absolute before:size-[120px] before:rounded-full before:bg-white rotate-180 progress">
+                            <span class="relative text-[32px] poppins-bold text-cblue size-[96px] rounded-full flex items-center justify-center bg-cgreen/15 rotate-180 progressVal">75%</span>
+                          </div>
+
+                          <div class="text-cblue poppins-bold text-lg flex flex-col items-center gap-2 mt-8 mb-4 text-center">
+                            Kontraktlar hisoboti
+                            <span class="poppins-regular text-sm text-dots ">
+                              Umumiy 1120 talabalardan to’lovni amalga oshirish ko’rsatkichi
+                            </span>
+                          </div>
+
+                          <button class="bg-cgreen text-white py-[9.5px] px-[22px] rounded-lg poppins-semibold text-sm ring-1 ring-inset ring-cgreen hover:text-cgreen hover:bg-white">
+                            Batafsil
+                          </button>
                         </div>
                       </div>
                     </div>

@@ -1,11 +1,13 @@
 "use strict"
 
+
+// Line Graph
+
 const myFirstChart = document.getElementById('myChart').getContext('2d');    
 
-
-const gradient = myFirstChart.createLinearGradient(0, 0, 0, 400);
+const gradient = myFirstChart.createLinearGradient(0, 0, 0, 200);
 gradient.addColorStop(0, '#4CBC9A');
-gradient.addColorStop(1, 'rgba(76, 175, 80, 0)'); 
+gradient.addColorStop(1, 'rgba(76, 188, 154, 0)'); 
 
 const myChart = new Chart(myFirstChart, {
     type: 'line',
@@ -24,9 +26,6 @@ const myChart = new Chart(myFirstChart, {
                 pointBackgroundColor: '#FFC107',
                 pointBorderColor: '#fff',
                 pointBorderWidth: 4,
-                hoverBorderWidth: 3,
-                hoverBorderColor: '#fff'
-               
             },
             {
                 label: '2026-2027',
@@ -39,8 +38,6 @@ const myChart = new Chart(myFirstChart, {
                 pointBackgroundColor: '#4CAF50',
                 pointBorderColor: '#fff',
                 pointBorderWidth: 4,
-                hoverBorderWidth: 3,
-                hoverBorderColor: '#fff'
             }
         ],
     },
@@ -66,3 +63,29 @@ const myChart = new Chart(myFirstChart, {
         }
     }
 });
+
+
+// Circular Progress 
+
+const circularProgress = document.querySelector('.progress'),
+    circularValue = document.querySelector('.progressVal')
+
+    let startValue = 0,
+        endValue = 75,
+        speedValue = 100;
+
+    let progres = setInterval(()=>{
+        startValue++;
+
+        circularValue.textContent = `${startValue}%`;
+        circularProgress.style.background = `conic-gradient(#374557 ${startValue * 3.6}deg, #FAFAFA 0deg)`
+
+        ;  // Check the value 
+
+        if(startValue == endValue){
+            clearInterval(progres)
+        }
+
+    }, speedValue)
+
+    console.log(circularProgress.style.background)
